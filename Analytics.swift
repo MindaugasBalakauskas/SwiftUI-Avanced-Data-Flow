@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Combine
 
-class Analytics {
+class Analytics: ObservableObject {
     func send(tag: String) {
         print("Tag \(tag) was sent")
     }

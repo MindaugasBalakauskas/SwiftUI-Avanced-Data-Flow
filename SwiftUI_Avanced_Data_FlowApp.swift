@@ -13,7 +13,7 @@ struct SwiftUI_Avanced_Data_FlowApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                FirstFeatureView(analytics: analytics)
+                FirstFeatureView()
                     .tabItem {
                         Image(systemName: "1.circle.fill")
                         Text("One")
@@ -29,6 +29,7 @@ struct SwiftUI_Avanced_Data_FlowApp: App {
                         Text("Three")
                     }
             }
+            .environmentObject(analytics)
         }
     }
 }

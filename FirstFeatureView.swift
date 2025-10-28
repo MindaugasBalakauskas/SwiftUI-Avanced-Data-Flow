@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct FirstFeatureView: View {
-    var analytics: Analytics
     
-    init(analytics: Analytics) {
-        self.analytics = analytics
-    }
+    @EnvironmentObject var analytics: Analytics
+    
     var body: some View {
         Text("Feature nr 1️⃣")
             .onAppear(){
@@ -22,5 +20,6 @@ struct FirstFeatureView: View {
 }
 
 #Preview {
-    FirstFeatureView(analytics: Analytics())
+    FirstFeatureView()
+        .environmentObject(Analytics()  )
 }
