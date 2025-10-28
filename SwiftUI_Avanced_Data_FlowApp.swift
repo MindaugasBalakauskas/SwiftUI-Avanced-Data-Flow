@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftUI_Avanced_Data_FlowApp: App {
+    let analytics = Analytics()
     var body: some Scene {
         WindowGroup {
             TabView {
-                FirstFeatureView()
+                FirstFeatureView(analytics: analytics)
                     .tabItem {
                         Image(systemName: "1.circle.fill")
                         Text("One")

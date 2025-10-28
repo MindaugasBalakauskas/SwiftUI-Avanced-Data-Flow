@@ -8,7 +8,7 @@
 import Foundation
 
 class Analytics {
-    func send(taf: String) {
+    func send(tag: String) {
         print("Tag \(tag) was sent")
     }
 }

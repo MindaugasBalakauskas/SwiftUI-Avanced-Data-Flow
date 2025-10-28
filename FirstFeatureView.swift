@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct FirstFeatureView: View {
+    var analytics: Analytics
+    
+    init(analytics: Analytics) {
+        self.analytics = analytics
+    }
     var body: some View {
         Text("Feature nr 1️⃣")
+            .onAppear(){
+                analytics.send(tag: "Feature nr 1️⃣")
+            }
     }
 }
 
 #Preview {
-    FirstFeatureView()
+    FirstFeatureView(analytics: Analytics())
 }
