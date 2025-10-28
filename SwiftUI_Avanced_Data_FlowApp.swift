@@ -28,6 +28,11 @@ struct SwiftUI_Avanced_Data_FlowApp: App {
                         Image(systemName: "3.circle.fill")
                         Text("Three")
                     }
+                LoginView()
+                    .tabItem {
+                        Image(systemName: "person.circle.fill")
+                        Text("Login")
+                    }
             }
         }
     }
