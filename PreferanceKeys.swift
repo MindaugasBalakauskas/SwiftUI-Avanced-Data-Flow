@@ -8,6 +8,14 @@
 import Foundation
 import SwiftUI
 
+struct MaxWidthPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = max(value, nextValue())
+    }
+}
+
 struct TexFieldInputPreferanceKey: PreferenceKey {
     static var defaultValue: String = ""
     

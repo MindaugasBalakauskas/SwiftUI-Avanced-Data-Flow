@@ -7,11 +7,21 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginView: View {    
     var body: some View {
-        NavigationView {
-            Text("Login View")
-                .navigationTitle("Login")
+        SyncingView {proxy in
+            Group {
+                Button("Login") {
+                }
+                Button("Sign Up") {
+                }
+            }
+            .syncWidth(using: proxy)
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(15)
+            .font(.headline)
         }
     }
 }
