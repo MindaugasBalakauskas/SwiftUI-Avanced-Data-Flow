@@ -6,10 +6,16 @@
 //
 
 import Foundation
-import Combine
+//import SwiftUI
+//mport Combine
 
-class Analytics: ObservableObject {
+class Analytics {
     func send(tag: String) {
         print("Tag \(tag) was sent")
+    }
+}
+class MockAnalytics: Analytics {
+    override func send(tag: String) {
+        print("Overriden method")
     }
 }

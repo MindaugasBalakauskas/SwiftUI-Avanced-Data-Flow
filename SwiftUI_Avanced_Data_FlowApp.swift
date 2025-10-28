@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct SwiftUI_Avanced_Data_FlowApp: App {
-    let analytics = Analytics()
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -18,6 +17,7 @@ struct SwiftUI_Avanced_Data_FlowApp: App {
                         Image(systemName: "1.circle.fill")
                         Text("One")
                     }
+                    .environment(\.analytics, MockAnalytics())
                 SecondFeatureView()
                     .tabItem {
                         Image(systemName: "2.circle.fill")
@@ -29,7 +29,6 @@ struct SwiftUI_Avanced_Data_FlowApp: App {
                         Text("Three")
                     }
             }
-            .environmentObject(analytics)
         }
     }
 }

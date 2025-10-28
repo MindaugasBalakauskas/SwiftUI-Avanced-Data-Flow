@@ -9,17 +9,16 @@ import SwiftUI
 
 struct FirstFeatureView: View {
     
-    @EnvironmentObject var analytics: Analytics
+    @Environment(\.analytics) var analytics: Analytics
     
     var body: some View {
         Text("Feature nr 1️⃣")
             .onAppear(){
-                analytics.send(tag: "Feature nr 1️⃣")
+                analytics.send(tag: "Feature 1")
             }
     }
 }
 
 #Preview {
     FirstFeatureView()
-        .environmentObject(Analytics()  )
 }
